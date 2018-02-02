@@ -2,23 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Calculatrice" x:Class="Calculatrice.CalculatricePage"  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
     ios:Page.UseSafeArea="true">
 
-    <Grid x:Name="MyLayout" BackgroundColor="Navy" RowSpacing="5" ColumnSpacing="5">
+        <Grid x:Name="MyLayout" BackgroundColor="Navy" RowSpacing="5" ColumnSpacing="5">
+
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="150"/>
-        </Grid.ColumnDefinitions>
-                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" BackgroundColor="White">
-            <Label Text="Hello" VerticalOptions="Center" HorizontalOptions="Center" ></Label>
-            <Slider Margin="5,20,5,20" Minimum="0" Maximum="300" HorizontalOptions="FillAndExpand">
-            </Slider>
-        
-        </StackLayout>
+         <RowDefinition Height="2*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+       <Label x:Name="result" FontSize="48" FontAttributes="Bold" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"  Grid.ColumnSpan="4" Margin="0,0,40,0" />
+
    <Label
             Grid.Row="1"
             Grid.Column="0"
