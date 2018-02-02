@@ -12,5 +12,13 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" BackgroundColor="White">
+            <Label Text="Hello" VerticalOptions="Center" HorizontalOptions="Center" ></Label>
+        </StackLayout>
+
+        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Label Text="COUCOU"></Label>
+        </StackLayout>
     </Grid>
 </ContentPage>
