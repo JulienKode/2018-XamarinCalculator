@@ -30,6 +30,8 @@ namespace Calculatrice
             {
                 case "+":
                     state += lastNb;
+                    result.Text = state.ToString();
+
                     break;
                 case "-":
                     state -= lastNb;
@@ -39,6 +41,7 @@ namespace Calculatrice
                     break;
                 case "x":
                     state = state * lastNb;
+                    result.Text = state.ToString();
                     break;
             }
 
