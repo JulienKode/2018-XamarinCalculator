@@ -7,11 +7,53 @@ namespace Calculatrice
     public partial class CalculatricePage : ContentPage
     {
         int state = 0;
-        int lastNb = 0;
+        int first = 0;
+        string op = null;
+        int second = 0;
 
         public CalculatricePage()
         {
             InitializeComponent();
+        }
+
+        void ManageCalcul(string pressed)
+        {
+            int nb;
+            if (Int32.TryParse(pressed, out nb))
+            {
+                Debug.WriteLine(nb);
+                if (op == null)
+                    first = nb;
+                else
+                    second = nb;
+            } else if (string.ReferenceEquals(pressed, "="))
+            {
+                MakeCalcul();
+            } else {
+                op = pressed;
+            }
+        }
+
+        void MakeCalcul() {
+            switch (op)
+            {
+                case "+":
+                    state = first + second;
+                    break;
+                case "-":
+                    state = first - second;
+                    break;
+                case "/":
+                    state = first / second;
+                    break;
+                case "x":
+                    state = first * second;
+                    break;
+            }
+            Debug.WriteLine(state.ToString());
+            result.Text = state.ToString();
+            op = null;
+
         }
 
         void Handle_Clicked(object sender, System.EventArgs e)
@@ -19,33 +61,8 @@ namespace Calculatrice
             Button button = (Button)sender;
             string pressed = button.Text;
 
-            Debug.WriteLine(pressed);
+            ManageCalcul(pressed);
 
-            if (Int32.TryParse(pressed, out lastNb))
-                Debug.WriteLine(lastNb);
-            else
-                Debug.WriteLine("String could not be parsed.");
-
-            switch (pressed) 
-            {
-                case "+":
-                    state += lastNb;
-                    result.Text = state.ToString();
-
-                    break;
-                case "-":
-                    state -= lastNb;
-                    break;
-                case "/":
-                    state = state / lastNb;
-                    break;
-                case "x":
-                    state = state * lastNb;
-                    result.Text = state.ToString();
-                    break;
-            }
-
-            //throw new NotImplementedException();
         }
 
     }
