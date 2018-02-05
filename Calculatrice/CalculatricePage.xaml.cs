@@ -6,6 +6,8 @@ namespace Calculatrice
 {
     public partial class CalculatricePage : ContentPage
     {
+        Calculator calculator = new Calculator();
+
         public CalculatricePage()
         {
             InitializeComponent();
@@ -16,7 +18,7 @@ namespace Calculatrice
             Button button = (Button)sender;
             string pressed = button.Text;
 
-            string nb = Calculator.ManageCalcul(pressed);
+            string nb = calculator.ManageCalcul(pressed);
             result.Text = nb;
         }
 
