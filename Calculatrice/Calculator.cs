@@ -16,6 +16,10 @@ namespace Calculatrice
 
         private string MakeCalcul(string op)
         {
+            if (op == null) {
+                return first;
+            }
+
             Debug.WriteLine(op);
 
             int fst;
@@ -40,49 +44,45 @@ namespace Calculatrice
 
             Debug.WriteLine(op);
             Debug.WriteLine(state.ToString());
+            Reset();
             return state.ToString();
-            op = null;
-
         }
 
 
         public string ManageCalcul(string pressed)
         {
+            Debug.WriteLine("TEST");
+            Debug.WriteLine(pressed.Length);
+
             int nb;
             if (Int32.TryParse(pressed, out nb))
             {
                 if (op == null)
-                {
                     first += pressed;
-                    return first;
-                }
                 else
-                {
                     second += pressed;
-                    return second;
-                }
             }
             else if (pressed.Equals("="))
                 return MakeCalcul(op);
-            else if (int.TryParse(first, out int n) == false)
+            else if (first.Length == 0 && pressed.Equals("-"))
+                first += "-";
+            else if (op != null && (op.Equals("x") || op.Equals("/")) && second.Length == 0 && pressed.Equals("-"))
+                second += "-";
+            else
             {
                 Debug.WriteLine("Operator");
                 Debug.WriteLine(pressed);
                 op = pressed;
             }
-            else if (int.TryParse(first, out int m))
-            {
-                Debug.WriteLine("Operator");
-                Debug.WriteLine(pressed);
-                op = pressed;
-            }
-            return pressed;
+
+            if (op == null)
+                return first;
+            return second;
         }
 
         public string Reset() {
             // Reset calculator
 
-            state = 0;
             first = "";
             op = null;
             second = "";
