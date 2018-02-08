@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns ="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Calculator.CalculatorPagel"  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true">
+	<ContentPage.Content>
+
+        <Grid x:Name="MyLayout" Padding="5,5,5,5" BackgroundColor="Black" RowSpacing="5" ColumnSpacing="5">
+
+        <Grid.RowDefinitions>
+         <RowDefinition Height="2*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+       <Label x:Name="result" FontSize="48" FontAttributes="Bold" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"  Grid.ColumnSpan="4" Margin="0,0,40,0" />
+                     
+       <Button Text="7" Grid.Row="1" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="8" Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="9" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="Blue" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+
+       <Button Text="4" Grid.Row="2" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="5" Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="6" Grid.Row="2" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="x" Grid.Row="2" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+
+       <Button Text="1" Grid.Row="3" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="2" Grid.Row="3" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="3" Grid.Row="3" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+
+       <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+
+       <Button Text="C" Grid.Row="5" Grid.Column="0"  BackgroundColor="Gray" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="Orange" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+       
+        
+    </Grid>
+	</ContentPage.Content>
+</ContentPage>

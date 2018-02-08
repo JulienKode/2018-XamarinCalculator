@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Calculatrice</string>
+	<string>Calculator</string>
 	<key>CFBundleName</key>
-	<string>Calculatrice</string>
+	<string>Calculator</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.julienkarst.Calculatrice</string>
+	<string>com.julienkarst.Calculator</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

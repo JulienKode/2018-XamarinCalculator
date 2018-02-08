@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Calculatrice
+namespace Calculator
 {
     public partial class App : Application
     {
@@ -8,7 +8,7 @@ namespace Calculatrice
         {
             InitializeComponent();
 
-            MainPage = new CalculatricePage();
+            MainPage = new CalculatorPage();
         }
 
         protected override void OnStart()

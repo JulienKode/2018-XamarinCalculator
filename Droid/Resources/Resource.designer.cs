@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Calculatrice.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Calculator.Droid.Resource", IsApplication=true)]
 
-namespace Calculatrice.Droid
+namespace Calculator.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace Calculatrice.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Calculatrice.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Calculator.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
