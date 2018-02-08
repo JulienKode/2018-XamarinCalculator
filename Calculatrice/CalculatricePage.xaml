@@ -26,7 +26,7 @@
        <Button Text="7" Grid.Row="1" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
        <Button Text="8" Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
        <Button Text="9" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
-       <Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
+       <Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="Blue" TextColor="White" FontSize="36" Clicked="Handle_Clicked" />
 
        <Button Text="4" Grid.Row="2" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
        <Button Text="5" Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" Clicked="Handle_Clicked" />
